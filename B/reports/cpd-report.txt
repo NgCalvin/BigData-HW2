@@ -1,0 +1,57 @@
+Found a 8 line (37 tokens) duplication in the following files: 
+Starting at line 124 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 136 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 29 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+
+		try(BufferedReader br = new BufferedReader(new FileReader(rnew)))
+		{
+			//Skipping first Line. It is just description of the format.
+			br.readLine();
+			
+			for(String line; (line = br.readLine())!=null;)
+			{
+				String[] temp = line.split(",");
+=====================================================================
+Found a 7 line (32 tokens) duplication in the following files: 
+Starting at line 74 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 127 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 139 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 32 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+
+				br2.readLine();
+				
+				//Looping each line from the Matrix to change the pageRank Score
+				for(String line; (line = br.readLine())!=null;)
+				{
+					//Splitting line into String[] by delimiter comma.
+					String[] temp = line.split(",");
+=====================================================================
+Found a 5 line (31 tokens) duplication in the following files: 
+Starting at line 127 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 139 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 32 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+Starting at line 64 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+
+			br.readLine();
+			
+			for(String line; (line = br.readLine())!=null;)
+			{
+				String[] temp = line.split(",");
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 74 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\PageRank.java
+Starting at line 64 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+
+				br2.readLine();
+				
+				//Looping each line from the Matrix to change the pageRank Score
+				for(String line; (line = br.readLine())!=null;)
+				{
+					//Splitting line into String[] by delimiter comma.
+					String[] temp = line.split(",");
+=====================================================================
+Found a 1 line (25 tokens) duplication in the following files: 
+Starting at line 79 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+Starting at line 90 of C:\Users\calvi\Documents\GitHub\BigData-HW2\B\src\Prepro.java
+
+						pw.println(current + "," + degree + "," + result.toString().replaceAll("[^0-9,]+",""));

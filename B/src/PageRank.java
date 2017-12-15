@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class PageRank 
 {
-	static double DampingFactor = 0.85;
+	static double dampingFactor = 0.85;
 	static double stoppingFactor = 0.0001;
 	static int numOfNodes = 875713;
 	static int step = 1;
@@ -43,6 +43,7 @@ public class PageRank
 	
 	public static void update() throws IOException
 	{
+		int progress = 0;
 		int counter = 1;
 		//This 3 lines make sure that each iteration creates a new file of PageRank Score, just for allowing us to see intermediate result.
 		String readPath = "src/r" + (step-1) + ".txt";
@@ -55,7 +56,7 @@ public class PageRank
 				String[] temp2 = line.split(",");
 				ArrayList<String> tempLine = new ArrayList<String>();
 				tempLine.add(temp2[0]);
-				tempLine.add(String.valueOf((1-DampingFactor)/numOfNodes));
+				tempLine.add(String.valueOf((1-dampingFactor)/numOfNodes));
 				rNew.add(tempLine);
 			}
 			System.out.println("Done initiating in R new.");
@@ -92,7 +93,7 @@ public class PageRank
 						{
 							if(rNew.get(j).get(0).equals(temp[i]))
 							{
-								Double intermediate = Double.parseDouble(rNew.get(j).get(1)) + ((DampingFactor * Double.parseDouble(temp2[1])) / degree);
+								Double intermediate = Double.parseDouble(rNew.get(j).get(1)) + ((dampingFactor * Double.parseDouble(temp2[1])) / degree);
 
 								rNew.get(j).remove(1);
 								rNew.get(j).add(String.valueOf(intermediate));
@@ -100,8 +101,11 @@ public class PageRank
 							}
 						}
 					}
+					
+					//This is a progress review section
 					counter++;
-					System.out.println(counter + "/ " + numOfNodes);
+					
+					System.out.println(counter + "/" + numOfNodes);
 				}
 
 			}
